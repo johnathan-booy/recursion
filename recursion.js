@@ -23,7 +23,11 @@ function longest(words, i = 0) {
 
 /** everyOther: return a string with every other letter. */
 
-function everyOther(str, i) {}
+function everyOther(str, i = 0) {
+	if (i >= str.length) return "";
+
+	return str[i] + everyOther(str, i + 2);
+}
 
 /** isPalindrome: checks whether a string is a palindrome or not. */
 
