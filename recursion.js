@@ -10,11 +10,20 @@ function product(nums, i = 0) {
 
 /** longest: return the length of the longest word in an array of words. */
 
-function longest(words) {}
+function longest(words, i = 0) {
+	if (i === words.length) {
+		return 0;
+	}
+
+	const length = words[i].length;
+	const longestWord = longest(words, i + 1);
+
+	return length > longestWord ? length : longestWord;
+}
 
 /** everyOther: return a string with every other letter. */
 
-function everyOther(str) {}
+function everyOther(str, i) {}
 
 /** isPalindrome: checks whether a string is a palindrome or not. */
 
